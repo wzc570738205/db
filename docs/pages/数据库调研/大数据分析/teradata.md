@@ -1,0 +1,33 @@
+<!--
+ * @Author: wangzhichiao<https://github.com/wzc570738205>
+ * @Date: 2021-03-29 16:02:15
+ * @LastEditors: wangzhichiao<https://github.com/wzc570738205>
+ * @LastEditTime: 2021-03-29 16:02:32
+-->
+# **teradata**
+## **概述**
+Teradata是由Teradata公司开发的，它主要适用于构建大规模数据仓库应用程序。
+
+Teradata在整体上是按Shared Nothing 架构体系进行组织的，他的定位就是大型数据仓库系统，定位比较高，他的软硬件都是NCR自己的，其他的都不识别；所以一般的企业用不起，价格很贵。由于Teradata通常被用于OLAP应用，因此单机的Teradata系统很少见，即使是单机系统，Teradata也建议使用SMP结构以尽可能地提供更好的数据库性能。
+## **架构**
+Teradata架构基于大规模并行处理（MPP）架构。 Teradata的主要组件是解析引擎，BYNET和访问模块处理器（AMP）。 下图显示了Teradata节点的高级架构。
+
+当客户端运行查询以插入记录时，解析引擎将记录发送到BYNET。 BYNET检索记录并将该行发送到目标AMP，AMP将这些记录存储在其磁盘上。 
+
+当客户端运行查询以检索记录时，解析引擎会向BYNET发送请求。 BYNET将检索请求发送到适当的AMP，然后AMPs并行搜索其磁盘并识别所需的记录并发送到BYNET。BYNET然后将记录发送到解析引擎，解析引擎又将发送到客户端。
+
+![](/images/dashuju/Aspose.Words.390a89bc-6b49-496d-b349-93be6392fec4.008.png)
+## **特点**
+1、无限并行化 - Teradata数据库系统基于大规模并行处理（MPP）架构。 MPP架构在整个系统上平均分配负载。 Teradata系统在其进程之间分割任务，并并行运行它们以确保任务快速完成。
+
+2、没有共享架构 - Teradata的架构称为共享无架构。 Teradata节点，其访问模块处理器（AMP）和与AMP相关联的磁盘独立工作。 他们不会与他人分享。
+
+3、连接 - Teradata可连接到通道连接的系统，如主机或网络连接的系统。
+
+4、成熟优化程序 - Teradata优化程序是市场上成熟的优化程序之一。 它自从开始就被设计为平行的。 它已经针对每个版本进行了优化。
+
+5、SQL - Teradata支持行业标准SQL与存储在表中的数据进行交互。 除此之外，它提供自己的扩展。
+
+6、强大的实用工具 - Teradata提供强大的实用程序，用于从/向Teradata系统导入/导出数据，例如FastLoad，MultiLoad，FastExport和TPT。
+
+7、自动分发 - Teradata自动将数据均匀分发到磁盘，无需任何手动干预。
