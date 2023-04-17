@@ -238,12 +238,6 @@ module.exports = {
                         ['数据库调研/对象数据库/参考文献.md', '参考文献'],
                     ]
                },
-                // {
-                //     title: '总结',
-                //     collapsable: false,
-                //     sidebarDepth: 0,
-                //     path: '数据库调研/总结.md'
-                // },
             ],
         },
     },
