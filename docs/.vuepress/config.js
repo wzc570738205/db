@@ -45,6 +45,7 @@ module.exports = {
                 ],
             },
             { text: '关于我', link: 'https://wangzc.wang' },
+            { text: '文档源码', link: 'https://github.com/wzc570738205/db' },
         ],
         sidebar: {
             '/pages/': [

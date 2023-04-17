@@ -10,3 +10,8 @@
 # 数据库整理
 ## 一份全面、多样、系统的数据库调研
 
+# run
+```bash
+npm install && npm run dev
+```
+
